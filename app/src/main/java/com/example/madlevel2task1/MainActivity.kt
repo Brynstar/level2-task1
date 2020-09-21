@@ -21,8 +21,7 @@ class MainActivity : AppCompatActivity() {
     private fun initViews() {
         binding.rvPlaces.layoutManager = StaggeredGridLayoutManager(2, LinearLayoutManager.VERTICAL)
         binding.rvPlaces.adapter = placeAdapter
-
-        // Populate the places list and notify the data set has changed.
+        
         for (i in Place.PLACE_NAMES.indices) {
             places.add(Place(Place.PLACE_NAMES[i], Place.PLACE_RES_DRAWABLE_IDS[i]))
         }
